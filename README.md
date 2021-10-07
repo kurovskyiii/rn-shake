@@ -1,4 +1,4 @@
-# rn-use-shake
+# rn-shake
 
 <!-- ![preview-cover](./docs/images/preview.png) -->
 
@@ -6,9 +6,9 @@
 
 <!-- **Please, don't use this module for production yet! (See issues)** -->
 
-<!-- [![npm version](https://img.shields.io/npm/v/use-shake-callback.svg?style=flat-square)](https://www.npmjs.org/package/rn-use-shake)
-[![weekly downloads](https://img.shields.io/npm/dw/use-shake-callback.svg?style=flat-square)](https://www.npmjs.org/package/rn-use-shake)
-[![npm bundle size](https://img.shields.io/bundlephobia/minzip/use-shake-callback.svg?style=flat-square)](https://www.npmjs.org/package/rn-use-shake)
+<!-- [![npm version](https://img.shields.io/npm/v/use-shake-callback.svg?style=flat-square)](https://www.npmjs.org/package/rn-shake)
+[![weekly downloads](https://img.shields.io/npm/dw/use-shake-callback.svg?style=flat-square)](https://www.npmjs.org/package/rn-shake)
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/use-shake-callback.svg?style=flat-square)](https://www.npmjs.org/package/rn-shake)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](./LICENSE)
 
 [![NPM](https://nodei.co/npm/use-shake-callback.png)](https://nodei.co/npm/use-shake-callback/)
