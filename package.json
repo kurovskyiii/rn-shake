@@ -1,0 +1,72 @@
+{
+  "name": "rn-shake",
+  "version": "1.0.0",
+  "description": "React Native useShake hook that helps detecting shake gesture with phone accelerometer.",
+  "author": "Dmytro Kurovskyi <me@kurovskyi.dev>",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "install-peers": "install-peers -f",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write .",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kurovskyi/rn-shake.git"
+  },
+  "keywords": [
+    "react",
+    "react-native",
+    "shake",
+    "sensor",
+    "accelerometer",
+    "gesture"
+  ],
+  "bugs": {
+    "url": "https://github.com/kurovskyi/rn-shake/issues"
+  },
+  "homepage": "https://github.com/kurovskyi/rn-shake#readme",
+  "dependencies": {
+    "react-native-sensors": "^7.3.3",
+    "rxjs": "^7.4.0"
+  },
+  "devDependencies": {
+    "@react-native-community/eslint-config": "^3.0.1",
+    "@types/react": "^17.0.27",
+    "@types/react-native": "^0.65.5",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-typescript": "^14.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-config-react-native-typescript": "^2.2.6",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.2.0",
+    "prettier": "^2.4.1",
+    "typescript": "^4.4.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ],
+    "*.{js,jsx,ts,tsx,json,html,md,css}": [
+      "prettier --write"
+    ]
+  }
+}
