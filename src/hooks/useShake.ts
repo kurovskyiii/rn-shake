@@ -29,7 +29,7 @@ export const useShake = (
   }: IUseShakeProps
 ) => {
   useEffect(() => {
-    if (!callback) {
+    if (!callback || (__DEV__ && Platform.OS === 'ios')) {
       return;
     }
 
