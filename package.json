@@ -1,18 +1,25 @@
 {
   "name": "rn-shake",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React Native useShake hook that helps detecting shake gesture with phone accelerometer.",
-  "author": "Dmytro Kurovskyi <me@kurovskyi.dev>",
+  "author": "Dmytro Kurovskyi <me@kurovskyi.dev> (https://github.com/kurovskyi)",
   "license": "MIT",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "typings": "lib/index.d.ts",
+  "files": [
+    "src",
+    "lib"
+  ],
   "scripts": {
-    "build": "tsc",
+    "ts": "tsc",
+    "compile": "rm -rf lib && tsc -p .",
     "install-peers": "install-peers -f",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write .",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "prepare": "npm run compile",
+    "release": "release-it"
   },
   "repository": {
     "type": "git",
@@ -34,12 +41,19 @@
     "react-native-sensors": "^7.3.3",
     "rxjs": "^7.4.0"
   },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
   "devDependencies": {
+    "@commitlint/config-conventional": "^13.2.0",
     "@react-native-community/eslint-config": "^3.0.1",
+    "@release-it/conventional-changelog": "^3.3.0",
     "@types/react": "^17.0.27",
     "@types/react-native": "^0.65.5",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
+    "commitlint": "^13.2.1",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-typescript": "^14.0.0",
@@ -54,11 +68,13 @@
     "husky": "^7.0.2",
     "lint-staged": "^11.2.0",
     "prettier": "^2.4.1",
+    "release-it": "^14.11.6",
     "typescript": "^4.4.3"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "yarn lint && yarn ts"
     }
   },
   "lint-staged": {
