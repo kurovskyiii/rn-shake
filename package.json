@@ -12,13 +12,11 @@
     "lib"
   ],
   "scripts": {
-    "ts": "tsc",
-    "compile": "rm -rf lib && tsc -p .",
+    "build": "tsc",
     "install-peers": "install-peers -f",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write .",
     "lint": "eslint .",
-    "prepare": "npm run compile",
     "release": "release-it"
   },
   "repository": {
@@ -74,7 +72,7 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "yarn lint && yarn ts"
+      "pre-commit": "yarn lint && yarn build"
     }
   },
   "lint-staged": {
