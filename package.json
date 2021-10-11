@@ -1,6 +1,6 @@
 {
   "name": "rn-shake",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React Native useShake hook that helps detecting shake gesture with phone accelerometer.",
   "author": "Dmytro Kurovskyi <me@kurovskyi.dev> (https://github.com/kurovskyi)",
   "license": "MIT",
