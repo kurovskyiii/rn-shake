@@ -4,6 +4,35 @@
 
 > 📱 React Native useShake hook that helps detecting shake gesture with phone accelerometer.
 
+## 📦 Installation
+
+```sh
+yarn add rn-shake react-native-sensors
+```
+
+## 🚀 Usage
+
+- The first argument of the hook is the callback function.
+- Second argument is the configuration object - All fields optional.
+- It is strongly recommended that you adjust the `threshold` value with experiments to match your needs.
+
+```ts
+import {useShake} from 'rn-shake';
+
+useShake(
+  () => {
+    console.log('🐍 Shook Shook');
+  },
+  {
+    threshold: 3,
+    sensorUpdateInterval: 200,
+    minimalTimeBetweenTriggers: 1000,
+    isTriggerAfterShakes: true,
+    resetDependencies: [],
+  }
+);
+```
+
 <!-- **Please, don't use this module for production yet! (See issues)** -->
 
 <!-- [![npm version](https://img.shields.io/npm/v/use-shake-callback.svg?style=flat-square)](https://www.npmjs.org/package/rn-shake)
