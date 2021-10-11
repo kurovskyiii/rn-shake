@@ -36,12 +36,12 @@
   },
   "homepage": "https://github.com/kurovskyi/rn-shake#readme",
   "dependencies": {
-    "react-native-sensors": "^7.3.3",
     "rxjs": "^7.4.0"
   },
   "peerDependencies": {
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "react-native-sensors": "*"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^13.2.0",
