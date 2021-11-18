@@ -8,8 +8,6 @@ import {
 } from 'react-native-sensors';
 import {map} from 'rxjs/operators';
 
-// const SHAKE_COUNT_RESET_TIME = 300;
-
 interface IUseShakeProps {
   threshold?: number;
   minimalTimeBetweenTriggers?: number;
@@ -34,7 +32,6 @@ export const useShake = (
     }
 
     let lastUpdate = 0;
-    // let shakeCount = 0;
     let shaked = false;
 
     setUpdateIntervalForType(SensorTypes.accelerometer, sensorUpdateInterval);
@@ -58,12 +55,7 @@ export const useShake = (
           return;
         }
 
-        // if (lastUpdate + SHAKE_COUNT_RESET_TIME < timestamp) {
-        //   shakeCount = 0;
-        // }
-
         lastUpdate = timestamp;
-        // shakeCount++;
 
         shaked = true;
 
